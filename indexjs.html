@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+       <title>Text Twist Main JS</title>
+       <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    </head>
+    <body>
+       <h1>Welcome to Text Twist!</h1>
+       <div id='content'><script></script></div>
+    <input type='button' id='hideshow' value='See Rack'>
+       <script>
+           $(document).ready(
+function(){
+            $("button").on('click', function(){
+               $.ajax({
+                 type: "GET",
+                 url: "serve.php",
+                 data: {"guess":$("input").val()},
+                 success: function(response){
+                     alert(JSON.stringify(response));
+                 }
+               })
+            });     
+});
+
+       </script>
+       <input type="text" placeholder="Enter your guess here: "/>
+       <button type="button">Guess</button>
+       <script>
+jQuery(document).ready(function(){
+        jQuery('#hideshow').on('click', function(event) {        
+             jQuery('#content').toggle('show');
+        });
+    });
+        </script>
+       
+    </body>
+</html>

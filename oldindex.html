@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Hello Scrabble Lover!</h1>
+  <p> Enter a rack, get the words</p>
+  
+  <FORM Name="Form1" ACTION="">
+    Enter a rack here: <INPUT TYPE=text name=name value=<?php $newuserrack; ?>>
+    <INPUT TYPE=Button Value="Submit" NAME="name" OnClick="myJsFunction">
+  </FORM>
+
+  <p id="output">Results: <?php echo $newuserrack?></p>
+
+  <input type="text" id="input1" />
+  <button onclick="myJsFunction()"></button>
+  <script type="text/javascript">
+    function myJsFunction(){
+      var text=document.getElementById('input1').value;
+      window.alert(text);
+    }
+  </script>
+
+</body>
+</html>
+
+</html>
